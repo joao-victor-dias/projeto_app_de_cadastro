@@ -25,9 +25,9 @@ namespace Dio.Serie
                     case "3":
                         Cadastro();
                         break;
-                    // case "4":
-                    //     Atualizar();
-                    //     break;
+                    case "4":
+                        Atualizar();
+                        break;
                     case "5":
                         Excluir();
                         break;
@@ -161,90 +161,89 @@ namespace Dio.Serie
 
         
 
-        // private static void Atualizar()
-        // {
+        private static void Atualizar()
+        {
                       
-        //     int entradaCategoria = ObterCategoria(); 
-        //     Console.WriteLine("");
+            int entradaCategoria = ObterCategoria(); 
+            Console.WriteLine("");
 
-        //      switch(entradaCategoria)
-        //     {
-        //         case 1:
-        //             Console.WriteLine("Filmes Cadastrados");
-        //             Filmes();
-        //             Console.WriteLine();
+             switch(entradaCategoria)
+            {
+                case 1:
+                    Console.WriteLine("Filmes Cadastrados");
+                    Filmes();
+                    Console.WriteLine();
             
-        //             Console.Write("Digite o id da série: ");
-        //             int indiceFilme = int.Parse(Console.ReadLine());
+                    Console.Write("Digite o id da série: ");
+                    int indiceFilme = int.Parse(Console.ReadLine());
 
-        //             ObterCategoria();
-                    
-        //             foreach (int i in Enum.GetValues(typeof(Genero)))
-        //             {
-        //                 Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
-        //             }
-        //             Console.Write("Escolha o gênero e digite a numeração correspondente:");
-        //             int entradaGeneroFilme = int.Parse(Console.ReadLine());
+                           
+                    foreach (int i in Enum.GetValues(typeof(Genero)))
+                    {
+                        Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
+                    }
+                    Console.Write("Escolha o gênero e digite a numeração correspondente:");
+                    int entradaGeneroFilme = int.Parse(Console.ReadLine());
 
-        //             Console.Write("Digite o título da série:");
-        //             string entradaTituloFilme = Console.ReadLine();
+                    Console.Write("Digite o título da série:");
+                    string entradaTituloFilme = Console.ReadLine();
 
-        //             Console.Write("Digite o ano de lançamento da série:");
-        //             int entradaAnoFilme = int.Parse(Console.ReadLine());
+                    Console.Write("Digite o ano de lançamento da série:");
+                    int entradaAnoFilme = int.Parse(Console.ReadLine());
 
-        //             Console.Write("Digite a descrição da série:");
-        //             string entradaDescricaoFilme = Console.ReadLine();
+                    Console.Write("Digite a descrição da série:");
+                    string entradaDescricaoFilme = Console.ReadLine();
 
-        //             Serie atualizaFilme = new Serie(id: indiceFilme,
-        //                                         categoria : (Categoria)entradaCategoria,
-        //                                         genero: (Genero)entradaGeneroFilme,
-        //                                         titulo: entradaTituloFilme,
-        //                                         ano: entradaAnoFilme,
-        //                                         descricao: entradaDescricaoFilme);
-        //             repositoriofilme.Atualiza(indiceFilme, atualizaFilme);
-        //             break;
+                    Filme atualizaFilme = new Filme(id: indiceFilme,
+                                                categoria : (Categoria)entradaCategoria,
+                                                genero: (Genero)entradaGeneroFilme,
+                                                titulo: entradaTituloFilme,
+                                                ano: entradaAnoFilme,
+                                                descricao: entradaDescricaoFilme);
+                    repositoriofilme.Atualiza(indiceFilme, atualizaFilme);
+                    break;
 
-        //         case 2:
-        //             Console.WriteLine("Séries cadastradas");
-        //             Series();
-        //             Console.WriteLine();
+                case 2:
+                    Console.WriteLine("Séries cadastradas");
+                    Series();
+                    Console.WriteLine();
             
-        //             Console.Write("Digite o id da série: ");
-        //             int indiceSerie = int.Parse(Console.ReadLine());
+                    Console.Write("Digite o id da série: ");
+                    int indiceSerie = int.Parse(Console.ReadLine());
 
-        //             foreach (int i in Enum.GetValues(typeof(Genero)))
-        //             {
-        //                 Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
-        //             }
-        //             Console.Write("Escolha o gênero e digite a numeração correspondente:");
-        //             int entradaGeneroSerie = int.Parse(Console.ReadLine());
+                    foreach (int i in Enum.GetValues(typeof(Genero)))
+                    {
+                        Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
+                    }
+                    Console.Write("Escolha o gênero e digite a numeração correspondente:");
+                    int entradaGeneroSerie = int.Parse(Console.ReadLine());
 
-        //             Console.Write("Digite o título da série:");
-        //             string entradaTituloSerie = Console.ReadLine();
+                    Console.Write("Digite o título da série:");
+                    string entradaTituloSerie = Console.ReadLine();
 
-        //             Console.Write("Digite o ano de lançamento da série:");
-        //             int entradaAnoSerie = int.Parse(Console.ReadLine());
+                    Console.Write("Digite o ano de lançamento da série:");
+                    int entradaAnoSerie = int.Parse(Console.ReadLine());
 
-        //             Console.Write("Digite a descrição da série:");
-        //             string entradaDescricaoSerie = Console.ReadLine();
+                    Console.Write("Digite a descrição da série:");
+                    string entradaDescricaoSerie = Console.ReadLine();
 
-        //             Serie atualizaSerie = new Serie(id: indiceSerie,
-        //                                         categoria : (Categoria)entradaCategoria,
-        //                                         genero: (Genero)entradaGeneroSerie,
-        //                                         titulo: entradaTituloSerie,
-        //                                         ano: entradaAnoSerie,
-        //                                         descricao: entradaDescricaoSerie);
-        //             repositorioserie.Atualiza(indiceSerie, atualizaSerie);
-        //             break;
+                    Serie atualizaSerie = new Serie(id: indiceSerie,
+                                                categoria : (Categoria)entradaCategoria,
+                                                genero: (Genero)entradaGeneroSerie,
+                                                titulo: entradaTituloSerie,
+                                                ano: entradaAnoSerie,
+                                                descricao: entradaDescricaoSerie);
+                    repositorioserie.Atualiza(indiceSerie, atualizaSerie);
+                    break;
 
-        //         default:
-        //             Console.WriteLine("");
-        //             Console.WriteLine("Opção incorreta.");
-        //             Atualizar();
-        //             break;
-        //     }     
+                default:
+                    Console.WriteLine("");
+                    Console.WriteLine("Opção incorreta.");
+                    Atualizar();
+                    break;
+            }     
             
-        // }
+        }
 
         private static void Excluir()
         {
