@@ -1,23 +1,21 @@
 
 using System;
-using Dio.Serie;
 
 namespace Dio.Serie
 {
-    public class Serie : EntidadeBase
+    public class Filme : EntidadeBase
     {
-       //Atributos
-       private Categoria Categoria {get;set;}
-       private Genero Genero {get; set;}
-       private string Titulo {get; set;}
-       private string Descricao {get; set;}
-       private int Ano {get; set;}
+        private Categoria Categoria {get;set;}
+        private Genero Genero {get; set;}
+        private string Titulo {get; set;}
+        private string Descricao {get; set;}
+        private int Ano {get; set;}
 
-       private bool Excluido {get;set;}
+        private bool Excluido {get;set;}
 
        //Metodos
        
-        public Serie(int id, Categoria categoria, Genero genero, string titulo, string descricao, int ano)
+        public Filme(int id, Categoria categoria, Genero genero, string titulo, string descricao, int ano)
         {
             this.Id = id;
             this.Categoria = categoria;
@@ -39,25 +37,31 @@ namespace Dio.Serie
             return retorno;              
         }
 
-        public string retornaTituloSerie()
+        public string retornaTituloFilme()
         {
             return this.Titulo;
         }
 
-        public int retornaIdSerie()
+        public int retornaIdFilme()
         {
             return this.Id;
         }
 
-        public bool retornaExcluidoSerie()
+        public bool retornaExcluidoFilme()
         {
             return this.Excluido;
         }
 
-        public void ExcluiSerie()
+        public void ExcluiFilme()
         {
             this.Excluido = true;
         }
 
+        public static implicit operator Filme(Serie v)
+        {
+            throw new NotImplementedException();
+        }
     }
+        
+      
 }

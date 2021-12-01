@@ -14,7 +14,7 @@ namespace Dio.Serie.Classes
 
         public void Exclui(int id)
         {
-            listaSerie[id].Exclui();
+            listaSerie[id].ExcluiSerie();
         }
 
         public void Insere(Serie objeto)
